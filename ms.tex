@@ -1,0 +1,137 @@
+% zip ms_files.zip ms.tex abstract.tex intro.tex method.tex results.tex conclusion.tex Praesepe.pdf variance.pdf simulated_CMD.pdf rotation_model_praesepe.pdf simulation_results.pdf NGC6819.pdf NGC6819_results.pdf hz.bib
+
+\documentclass[useAMS, usenatbib, preprint, 12pt]{aastex}
+% \documentclass[a4paper,fleqn,usenatbib,useAMS]{mnras}
+\usepackage{cite, natbib}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{epsfig}
+\usepackage{cases}
+\usepackage[section]{placeins}
+\usepackage{graphicx, subfigure}
+\usepackage{color}
+\usepackage{bm}
+
+\AtBeginDocument{\let\textlabel\label}
+
+\newcommand{\ie}{{\it i.e.}}
+\newcommand{\eg}{{\it e.g.}}
+\newcommand{\etal}{{\it et al.}}
+
+\newcommand{\kepler}{{\it Kepler}}
+\newcommand{\Kepler}{{\it Kepler}}
+\newcommand{\corot}{{\it CoRoT}}
+\newcommand{\Ktwo}{{\it K2}}
+\newcommand{\ktwo}{\Ktwo}
+\newcommand{\TESS}{{\it TESS}}
+\newcommand{\tess}{{\it TESS}}
+\newcommand{\LSST}{{\it LSST}}
+\newcommand{\lsst}{{\it LSST}}
+\newcommand{\Wfirst}{{\it WFIRST}}
+\newcommand{\wfirst}{{\it WFIRST}}
+\newcommand{\SDSS}{{\it SDSS}}
+\newcommand{\PLATO}{{\it PLATO}}
+\newcommand{\plato}{{\it PLATO}}
+\newcommand{\Gaia}{{\it Gaia}}
+\newcommand{\gaia}{{\it Gaia}}
+\newcommand{\panstarrs}{{\it PanSTARRS}}
+\newcommand{\LAMOST}{{\it LAMOST}}
+
+\newcommand{\Teff}{$T_{\mathrm{eff}}$}
+\newcommand{\teff}{$T_{\mathrm{eff}}$}
+\newcommand{\FeH}{[Fe/H]}
+\newcommand{\feh}{[Fe/H]}
+\newcommand{\prot}{$P_{\mathrm{rot}}$}
+\newcommand{\pmega}{$\bar{\omega}$}
+\newcommand{\mj}{$m_j$}
+\newcommand{\mh}{$m_h$}
+\newcommand{\mk}{$m_k$}
+\newcommand{\mx}{$m_x$}
+\newcommand{\logg}{log(g)}
+\newcommand{\dnu}{$\Delta \nu$}
+\newcommand{\numax}{$\nu_{\mathrm{max}}$}
+\newcommand{\degrees}{$^\circ$}
+\newcommand{\vz}{$v_{\bf z}$}
+\newcommand{\vb}{$v_{\bf b}$}
+\newcommand{\kms}{$kms^{-1}$}
+\newcommand{\sigmavb}{$\sigma_{v{\bf b}}$}
+\newcommand{\sigmavz}{$\sigma_{v{\bf z}}$}
+
+% \newcommand{\nsim_stars}{841}
+
+\newcommand{\amnh}{1}
+\newcommand{\cca}{2}
+\newcommand{\hawaii}{3}
+
+\newcommand{\sd}{{\tt stardate}}
+\newcommand{\gcolor}{$G_{BP} - G_{RP}$}
+\newcommand{\mcp}{\citep{mcquillan2014}}
+\newcommand{\mct}{\citet{mcquillan2014}}
+\newcommand{\bvector}{${\bf b}$}
+\newcommand{\python}{{\it Python}}
+
+\newcommand{\racomment}[1]{{\color{blue}#1}}
+
+\begin{document}
+
+\title{Exploring the origin of the rotation period gap using kinematics}
+
+\author{%
+    Ruth Angus,
+    \etal}
+%     Angus Beane,
+%     Adrian Price-Whelan,
+%     Jennifer van Saders,
+%     Elisabeth Newton,
+%     Jason Curtis,
+%     Travis Berger,
+%     Dan Foreman-Mackey,
+%     Lauren Anderson,
+%     Megan Bedell,
+%     Jackie Faherty,
+%     Rocio Kiman,
+%     Melissa Ness}
+
+\altaffiltext{\amnh}{American Museum of Natural History, Central Park West,
+Manhattan, NY, USA}
+% \altaffiltext{\cca}{Center for Computational Astrophysics, Flatiron Institute,
+% 162 5th Avenue, Manhattan, NY, USA}
+% \altaffiltext{\hawaii}{Institute for Astronomy, University of Hawai'i at
+% M\={a}noa, Honolulu, HI, USA}
+
+% Overall word limit for a letter: 3500. Figures limited to 5.
+
+% abstract. Word limit: 250. Currently 173.
+\begin{abstract}
+    \include{abstract}
+\end{abstract}
+
+% Word limit: 1000. Currently 886.
+\section{Introduction}
+\include{intro}
+% FIGURE 1: The gap the_gap.pdf
+
+% Word limit: 500.
+\include{method}
+% FIGURE 2: The CMD CMD_cuts.pdf
+% FIGURE 3: The gap, divided period_teff.pdf
+
+% Word limit: 500.
+\section{Results}
+\begin{itemize}
+    \item{Velocity dispersion smoothly increases}
+\end{itemize}
+% FIGURE 4: Velocity dispersion as a function of rotation period
+% rotation_vb_dispersion.pdf
+% FIGURE 5: Velocity dispersion as a function of 'age' age_vb_dispersion.pdf
+
+% Word limit: 500
+\section{Discussion}
+
+% Word limit: 250
+\section{Conclusion}
+
+\bibliographystyle{plainnat}
+\bibliography{bib.bib}
+\end{document}
